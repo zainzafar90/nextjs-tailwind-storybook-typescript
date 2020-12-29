@@ -1,0 +1,46 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "zoom-ui": [
+          "components/index.tsx"
+        ]
+      },
+      "target": "es6",
+      "lib": [
+        "dom",
+        "es2017"
+      ],
+      "allowJs": true,
+      "skipLibCheck": true,
+      "strict": false,
+      "strictNullChecks": true,
+      "forceConsistentCasingInFileNames": true,
+      "noEmit": true,
+      "esModuleInterop": true,
+      "experimentalDecorators": true,
+      "module": "esnext",
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "jsx": "preserve",
+      "noUnusedParameters": true,
+      "noUnusedLocals": true,
+      "noImplicitAny": true,
+      "typeRoots": [
+        "node_modules/@types",
+        "./typings"
+      ]
+    },
+    "include": [
+      "next-env.d.ts",
+      "**/*.ts",
+      "**/*.tsx",
+      "components/**/*.tsx"
+    ],
+    "exclude": [
+      "node_modules",
+      "es"
+    ]
+  }
+  

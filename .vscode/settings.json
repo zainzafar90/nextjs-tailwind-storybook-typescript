@@ -1,0 +1,11 @@
+{
+    "tailwindCSS.experimental.showPixelValues": true,
+    "css.validate": false,
+    "editor.quickSuggestions": {
+        "strings": true
+    },
+    "tailwindCSS.emmetCompletions": true,
+    "tailwindCSS.includeLanguages": {
+        "plaintext": "javascript"
+    }
+}
