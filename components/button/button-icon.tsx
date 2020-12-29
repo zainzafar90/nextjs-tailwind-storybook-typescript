@@ -1,17 +1,19 @@
-import React from "react";
+import React from 'react'
+import withDefaults from '../utils/with-defaults'
+
 interface Props {
-  isRight?: boolean;
-  isSingle?: boolean;
-  className?: string;
+  isRight?: boolean
+  isSingle?: boolean
+  className?: string
 }
 
 const defaultProps = {
   isRight: false,
-  className: "",
-};
+  className: '',
+}
 
-type NativeAttrs = Omit<React.HTMLAttributes<any>, keyof Props>;
-export type ButtonIconProps = Props & typeof defaultProps & NativeAttrs;
+type NativeAttrs = Omit<React.HTMLAttributes<any>, keyof Props>
+export type ButtonIconProps = Props & typeof defaultProps & NativeAttrs
 
 const ButtonIcon: React.FC<React.PropsWithChildren<ButtonIconProps>> = ({
   isRight,
@@ -22,8 +24,8 @@ const ButtonIcon: React.FC<React.PropsWithChildren<ButtonIconProps>> = ({
 }) => {
   return (
     <span
-      className={`icon ${isRight ? "right" : ""} ${
-        isSingle ? "single" : ""
+      className={`icon ${isRight ? 'right' : ''} ${
+        isSingle ? 'single' : ''
       } ${className}`}
       {...props}
     >
@@ -59,7 +61,9 @@ const ButtonIcon: React.FC<React.PropsWithChildren<ButtonIconProps>> = ({
         }
       `}</style>
     </span>
-  );
-};
+  )
+}
 
-export default React.memo(ButtonIcon);
+const MemoButtonIcon = React.memo(ButtonIcon)
+
+export default withDefaults(MemoButtonIcon, defaultProps)
